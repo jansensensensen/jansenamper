@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+html{
+  background: url(https://images.unsplash.com/photo-1554189097-ffe88e998a2b?ixlib=rb-1.2.1&w=1000&q=80);
+  background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 100%, 91%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.5s;
+}
+
+.sidenav a:hover {
+  background-color: rgba(0, 140, 186, 0.5);
+  color: #f1f1f1;
+  opacity: 1
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+h1{
+text-align: center;
+}
+.center3{
+text-align: center;
+}
+
+.menu:hover {
+color: #f1f1f1;	
+}
+
+#main {
+  transition: margin-left .5s;	
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.stylee{
+  margin: auto;
+  width: 50%; 
+  border: 3px solid black;
+  padding: 10px;
+}
+
+img {
+  border: 1px solid #ddd; 
+  border-radius: 4px;  
+  padding: 5px; 
+  width: 150px; 
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.center1{
+  display: block;
+  margin-left: 43%;
+  margin-right: auto;
+}
+h2{
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 40px; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+}
+
+.collapsible1 {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+  padding: 13px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  text-align: left;
+}
+
+.collapsible {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  text-align: left;
+}
+
+.collapsible2 {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+  padding: 13px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  text-align: left;
+}
+
+.collapsible3 {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+  padding: 13px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  text-align: left;
+}
+
+.content {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background: url(https://images.unsplash.com/photo-1568738351265-c7065f5d4293?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+  background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(0, 140, 186, 0.5);
+}
+.active, .collapsible1:hover {
+  background-color: rgba(0, 140, 186, 0.5);
+}
+.active, .collapsible2:hover {
+  background-color: rgba(0, 140, 186, 0.5);
+}
+.active, .collapsible3:hover {
+  background-color: rgba(0, 140, 186, 0.5);
+}
+
+.collapsible:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible1:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible2:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible3:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.content1 {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background: url(https://images.unsplash.com/photo-1568738351265-c7065f5d4293?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+  background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.content2 {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background: url(https://images.unsplash.com/photo-1568738351265-c7065f5d4293?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+  background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.content3 {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background: url(https://images.unsplash.com/photo-1568738351265-c7065f5d4293?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+  background-position:center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.sidenav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 5px;
+  font-size: 17px;
+  border: none;;
+  font-size: 14px;
+}
+
+.sidenav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 22px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidenav .search-container button:hover {
+  background: #ccc;
+</style>
+</head>
+<body>
+
+<div id="main">
+  <span style="font-size:27px;cursor:pointer" class="menu" onclick="openNav()">&#9776; Menu</span>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="search-container">
+  <form action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  </div>		
+  <a href="#">Home</a>
+  <a href="#popular">Popular</a>
+  <a href="#dish">Dishes</a>
+</div>	
+	<h1>WELCOME FOOD ENTHUSIAST!</h1>
+	<h3 class="center3">Jansen's Kitchen</h3>
+	<h4 class="center3"> Since 1998 </h4>
+	<div class="center1">
+	<img src="https://www.animatedimages.org/data/media/92/animated-cook-and-chef-image-0021.gif">
+	</div>
+</br>
+	<p class="stylee">Good nutrition is an important part of leading a healthy lifestyle. Combined with physical activity, your diet can help you to reach and maintain a healthy body, reduce your risk of chronic diseases, and promote your overall health.</p>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+	<h2 id="popular" data-shadow='Popular right now!' class="center">Popular right now!<h2>
+	<a target="_blank"  href="https://pilipinasrecipes.com/wp-content/uploads/2018/01/Bangus-Sisig-Recipe.jpg">
+  	<img src="https://pilipinasrecipes.com/wp-content/uploads/2018/01/Bangus-Sisig-Recipe.jpg" class="center" alt="Porksisig">
+	</a>
+	<h3 class="center">Bangus Sisig</h3>
+	<p class="center">This Bangus Sisig Recipe can be your everyday go-to dish. It’s a simple dish yet so tasty. Added ingredients like onions, garlic, ginger, salt and pepper, lemon, soy sauce, chili, and mayonnaise all contribute to its umami taste so there’s no need to add MSG anymore.</p>
+		<p class="center"><b>Author:</b> Pilipinas Recipes <br><b>Cuisine:</b> Filipino<br><b>Prep Time:</b> 15 mins<br><b>Cook Time:</b> 30 mins</p>
+		<div class="center">
+		<button type="button" class="collapsible"><b>Ingredients</b></button>
+		</div>
+		<div class="content">
+  		<ul class="center">
+  			<li>½ kilo boneless bangus fillet, chill then cut into chunks</li>
+  			<li>2 pcs small white onions, chopped</li>
+  			<li>1 red onion, chopped</li>
+			<li>10 pcs Calamansi, extract the juice</li>
+			<li>1 pc green chili peppers(siling haba), sliced diagonally</li>
+			<li>1 tsp. sea salt</li>
+			<li>¼ tsp ground black pepper</li>
+			<li>1 to 2 Tbsp. margarine</li>
+		</ul> 
+		</div> 
+</br>
+</br>
+
+<div class="center">
+<button type="button" class="collapsible1"><b>Instructions</b></button>
+</div>
+		<div class="content1">
+		<ol class="center">
+  			<li>Prepare the bangus fillet by slicing the back of the bangus a spreading it like a butterfly.</li>
+  			<li>Then remove the skin and backbone.</li>
+  			<li>Debone the bangus fillet. Chill for 1 to 2 hours and cut it into chunks.</li>
+			<li>Heat up a non-stick stove top grill and brush with 1 tablespoon cooking oil.</li>
+			<li>Grill the bangus chunks on all sides until the meat turns white and sides are brown.</li>
+			<li>Transfer to a plate with paper towels to absorb excess oil. Set aside.</li>
+			<li>In a bowl, combine bangus chunks, onions, green chili peppers, calamansi juice, ground pepper, and salt.</li>
+			<li>Toss and mix the ingredients well.</li>
+			<li>Heat a sizzling plate on a stove and put the margarine until melted and sizzling.</li>
+			<li>Then place the bangus sisig mixture in the sizzling plate and toss lightly until the margarine coats all the ingredients and the onions are slightly soft and fragrant.</li>
+			<li>Turn off heat and transfer the sizzling plate with the bangus sisig.</li>
+			<li>Serve.</li>
+		</ol> 
+		</div> 
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+		<h1 id="dish">Filipino Dishes</h1>
+
+</br>
+</br>
+		<a target="_blank"  href="https://panlasangpinoy.com/wp-content/uploads/2019/11/lechon-belly-roll.jpg">
+  		<img src="https://panlasangpinoy.com/wp-content/uploads/2019/11/lechon-belly-roll.jpg" class="center" alt="Lechon Belly Roll">
+		</a>
+		<h3 class="center">Lechon Belly Roll</h3>
+		<p class="center">Lechon Belly Roll is another way to make crispy lechon belly. The outcome of this recipe is similar to the flavor of lechon Cebu. It is tasty. The inside is tender and moist, while the skin is as crispy as it can be.</p>
+		<p class="center"><b>Author:</b> Panlasang Pinoy <br><b>Cuisine:</b> Filipino<br><b>Prep Time:</b> 15 mins<br><b>Cook Time:</b> 3 hours 30 minutes</p>
+		<div class="center">
+		<button type="button" class="collapsible2"><b>Ingredients</b></button>
+		</div>
+		<div class="content2">
+  		<ul class="center">
+			<li>5 lbs. pork belly whole slab</li>
+  			<li>6 tablespoons Knorr SavorRich Pork Seasoning</li>
+  			<li>1/2 cup soy sauce</li>
+			<li>1 piece onion</li>
+			<li>3 heads garlic</li>
+			<li>1 tsp. sea salt</li>
+			<li>2 bunches scallions</li>
+			<li>3 stalks lemongrass</li>
+			<li>1/2 cup cooking oil</li>
+			<p><b>Spicy Vinegar Dip:</b></p>
+			<li>1 cup white vinegar</li>
+  			<li>2 tablespoons soy sauce</li>
+  			<li>6 cloves garlic crushed and chopped</li>
+			<li>½ teaspoon white sugar</li>
+			<li>1 tablespoon whole peppercorn</li>
+			<li>6 pieces Thai chili chopped</li>
+		</ul> 
+		</div> 
+</br>
+</br>
+
+<div class="center">
+<button type="button" class="collapsible3"><b>Instructions</b></button>
+</div>
+		<div class="content3">
+		<ol class="center">
+  			<li>Rub 5 tablespoons Knorr SavorRich on the meat part of the pork. Spread evenly. Turn the pork over and rub the remaining SavorRich and soy sauce on the skin of the pork. Let it marinate for 30 minutes.</li>
+  			<li>Preheat oven to 350F.</li>
+  			<li>Chop the scallion, onion, and garlic. Crush the lemon grass and slice into pieces. Place all the garlic and onion over the belly. Add scallion and lemongrass. Roll the belly and secure by tying kitchen twine.</li>
+			<li>Rub oil all over the belly roll. Pour 4 cups of water in a roasting pan and put remaining scallions and lemongrass. Arrange a roasting rack over the pan and place the rolled belly on the rack. Roast for 1 hour.</li>
+			<li>Prepare the basting sauce by combining 2 tablespoons soy sauce and ¼ cup oil. Mix well. Brush all over the pork.</li>
+			<li>Increase the heat to 360F. Continue to roast for another hour. Note: add more water on the pan if needed.</li>
+			<li>Increase the heat to 370F. Brush with basting sauce. Roast for 1 hour more.	</li>
+			<li>Increase heat to 400F. Continue to roast until the skin gets very crispy. Remove from the oven and let the pork belly cool down.</li>
+			<li>Make the dipping sauce by combining all the sauce ingredients as listed above. Microwave for 30 seconds.</li>
+			<li>Remove the twine from the belly roll and chop into serving pieces. Serve with spicy vinegar dip.</li>
+			<li>Serve.</li>
+		</ol> 
+		</div> 
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+
+} 
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.parentNode.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+
+var coll = document.getElementsByClassName("collapsible1");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.parentNode.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+
+var coll = document.getElementsByClassName("collapsible2");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.parentNode.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+
+var coll = document.getElementsByClassName("collapsible3");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.parentNode.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} 
+
+		
+</script>
+</body>
+</html> 
